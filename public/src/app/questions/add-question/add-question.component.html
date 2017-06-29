@@ -1,0 +1,10 @@
+<a [routerLink]='["/questions"]'>Home</a>
+<h1>New Question</h1>
+
+<p *ngIf='errors != null'>{{ errors }}</p>
+<form>
+  <p>Question:</p><textarea name="question" [(ngModel)]='question.question'></textarea>
+  <p>Description (optional):</p><textarea name="description" [(ngModel)]='question.description'></textarea>
+</form>
+<button (click)='cancel()' >Cancel</button>
+<button (click)= 'addQuestion()' >Submit</button>

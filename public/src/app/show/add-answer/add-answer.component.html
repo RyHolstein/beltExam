@@ -1,0 +1,12 @@
+<a [routerLink]='["/questions"]'>Home</a>
+<a [routerLink]='["/question", question._id]'>Back to the Question</a>
+
+<h1> {{ question.question }} </h1>
+<h3> {{ question.description }}</h3>
+<form>
+  <p>Your Answer:</p>
+  <textarea name="answer" [(ngModel)]='answer.answer'></textarea>
+  <p>Supporting Detail (Optional):</p>
+  <textarea name="description" [(ngModel)]='answer.description'></textarea>
+</form>
+<button (click)="addAnswer()">Submit</button>
